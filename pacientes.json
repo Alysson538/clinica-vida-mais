@@ -1,0 +1,68 @@
+[
+    {
+      "nome": "Carlos Lima",
+      "cpf": "123.456.789-01",
+      "data_nascimento": "22-08-1972",
+      "telefone": "11999990001"
+    },
+    {
+      "nome": "Amanda Rocha",
+      "cpf": "987.654.321-00",
+      "data_nascimento": "14-10-1995",
+      "telefone": "11999990002"
+    },
+    {
+      "nome": "Roberto Souza",
+      "cpf": "111.222.333-44",
+      "data_nascimento": "13-07-1988",
+      "telefone": "11999990003"
+    },
+    {
+      "nome": "Beatriz Mendes",
+      "cpf": "555.666.777-88",
+      "data_nascimento": "02-12-1990",
+      "telefone": "11999990004"
+    },
+    {
+      "nome": "Luciana Castro",
+      "cpf": "222.333.444-55",
+      "data_nascimento": "01-06-1985",
+      "telefone": "11999990005"
+    },
+    {
+      "nome": "Felipe Andrade",
+      "cpf": "333.444.555-66",
+      "data_nascimento": "23-01-2000",
+      "telefone": "11999990006"
+    },
+    {
+      "nome": "Mariana Teixeira",
+      "cpf": "444.555.666-77",
+      "data_nascimento": "20-09-1991",
+      "telefone": "11999990007"
+    },
+    {
+      "nome": "Pedro Henrique",
+      "cpf": "666.777.888-99",
+      "data_nascimento": "12-03-1999",
+      "telefone": "11999990008"
+    },
+    {
+      "nome": "Isabella Silva",
+      "cpf": "777.888.999-00",
+      "data_nascimento": "17-04-1998",
+      "telefone": "11999990009"
+    },    
+    {
+      "nome": "Lucas Alves",
+      "cpf": "888.999.000-11",
+      "data_nascimento": "15-08-1990",
+      "telefone": "11999990010"
+    },
+    {
+      "nome": "Gabreiel Moraes",
+      "cpf": "478.956.231-04",
+      "data_nascimento": "30-07-2016",
+      "telefone": "11988884456"
+    }
+]
