@@ -35,6 +35,8 @@ CREATE TABLE IF NOT EXISTS consultas (
 )''')
 conn.commit()
 
+# Funções
+
 def importar_medicos_csv():
     with open('medicos.csv', newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -77,9 +79,15 @@ def agendar_consulta():
     paciente_id = input("ID do paciente: ")
     medico_id = input("ID do médico: ")
     data = input("Data da consulta (DD/MM/YYYY): ")
+    try:
+
+        data_formatada = datetime.strptime(data, "%d/%m/%Y").strftime("%Y-%m-%d")
+    except ValueError:
+        print("Data inválida. Use o formato DD/MM/YYYY.")
+        return
     obs = input("Observações: ")
     cursor.execute("INSERT INTO consultas (paciente_id, medico_id, data, observacoes) VALUES (?, ?, ?, ?)",
-                   (paciente_id, medico_id, data, obs))
+                   (paciente_id, medico_id, data_formatada, obs))
     conn.commit()
     print("Consulta agendada.")
 
@@ -92,9 +100,14 @@ def listar_consultas_paciente():
         WHERE c.paciente_id = ?
     ''', (paciente_id,))
     resultados = cursor.fetchall()
+
     if resultados:
         for r in resultados:
-            print(f"ID: {r[0]}, Data: {r[1]}, Médico: {r[2]}, Obs: {r[3]}")
+            try:
+                data_formatada = datetime.strptime(r[1], "%Y-%m-%d").strftime("%d/%m/%Y")
+            except ValueError:
+                data_formatada = r[1]  # Exibe como está se a conversão falhar
+            print(f"ID: {r[0]}, Data: {data_formatada}, Médico: {r[2]}, Obs: {r[3]}")
     else:
         print("Nenhuma consulta encontrada.")
 
