@@ -35,7 +35,6 @@ CREATE TABLE IF NOT EXISTS consultas (
 )''')
 conn.commit()
 
-# Funções
 
 def importar_medicos_csv():
     with open('medicos.csv', newline='', encoding='utf-8') as csvfile:
